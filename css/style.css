@@ -1,0 +1,110 @@
+/*  
+ Theme Name: Fixed Navbar
+Theme URI: -
+Author:MasterWeb2000 Team Kubilay Elüstü
+Author URI: https:www.masterweb2000.com
+Description: Bootstrap Blog Theme for using any website by MasterWeb2000 Team
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text: Kubilay Elüstü
+*/
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Arial";
+}
+
+.navbar{
+    position: fixed;
+    height: 60px;
+    overflow: hidden;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background: #f1f1f1;
+    width: 100%;
+}
+.logo{
+    background: url(../img/logo.png) no-repeat 50% 50%;
+    background-size: contain;
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-left:20px;
+}
+.menu{
+    position: absolute;
+    right: 20px;
+}
+.menu a{
+    color: #333;
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 20px;
+    transition: color 0.3s;
+    text-transform: uppercase;
+}
+.menu a:hover{
+    color: #6ab04c;
+}
+.header{
+    width: 100%;
+    height: 600px;
+    background: url(../img/bg.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    margin-top: 60px;
+}
+.btn{
+    display: none;
+    position: absolute;
+    right: 20px;
+}
+.btn:hover > span{
+    background: #6ab04c;
+}
+.btn span{
+    display: block;
+    margin: 6px;
+    width: 40px;
+    height: 3px;
+    background: #333;
+}
+p{
+    padding: 20px;
+    font-size: 20px;
+    text-align: justify;
+
+}
+
+/*Responsive CSS*/
+@media only screen and (max-width : 600px) {
+    .navbar{
+        overflow: visible;
+    }
+    .menu{
+        width: 100%;
+        right: 0;
+        top: 60px;
+        background: #f1f1f1;
+        overflow: hidden;
+        max-height: 0;
+    }
+    .menu a{
+        display: block;
+        text-align: center;
+        padding: 20px;
+        margin: 0;
+    }
+    .btn{
+        display: block;
+        cursor: pointer;
+        margin-top: -17px
+    }
+    .show{
+        max-height: 500px;
+    }
+}
